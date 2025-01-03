@@ -11,7 +11,7 @@ body {
     width: 100%;
     text-align: left;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     background: #DAD7CD;
     color: #344E41;
     font-size: 40px;
@@ -34,43 +34,47 @@ body {
     transform-origin: center;
 }
 
-
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 200px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 120; /* Stay at the top */
-    left: 0;
-    background-color: #344E41; 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 0px;
+.topnav {
+    width: 100%;
+    background-color: #344E41;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    position: fixed;
+    top: 120px;
+    z-index: 1;
+    height: 50px;
+    box-sizing: border-box;
 }
 
-.sidenav a {
-    padding: 20px 15px;
+.topnav a {
+    color: #DAD7CD;
     text-align: center;
     text-decoration: none;
+    padding: 0;
     font-size: 16px;
-    color: #DAD7CD;
-    display: block;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-.sidenav a:hover {
+.topnav a:hover,
+.topnav a.active {
     color: #344E41;
     background-color: #ffffff;
 }
 
 
 .content {
-    margin-left: 200px;
-    margin-top: 120px;
+    margin-top: 170px;
     padding: 20px 20px;
 }
 
 .home-content {
-    margin-left: 200px;
-    margin-top: 120px;
+    margin-top: 180px;
     padding: 20px 20px;
     display: grid; 
     grid-template-rows: auto auto; 
@@ -78,8 +82,7 @@ body {
 }
 
 .about-content {
-    margin-left: 200px;
-    margin-top: 120px;
+    margin-top: 180px;
     padding: 20px 20px; 
     display: grid; 
     grid-template-rows: auto auto auto; 
@@ -173,7 +176,7 @@ button[type="apply-button"]:focus {
 
 .container {
     display: grid;
-    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-columns: 0.5fr 2fr;
     gap: 20px;
     padding: 10px;
 }

@@ -14,22 +14,45 @@ public class HTMLElements {
                 </head>
             """;
             
-    public String navigation = """
-            <div class='sidenav'>
-                <a href='/'>Home</a>
-                <a href='/PageAbout.html'>About</a>
-                <a href='/page2A.html'>LGA Statistics</a>
-                <a href='page2B.html'>Regional Group Statistics</a>
-                <a href='page3A.html'>Compare LGA</a>
-                <a href='page3B.html'>Changes Over Time</a>
-            </div>
+            public String navigation = """
+                <div class="topnav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/PageAbout.html" class="nav-link">About</a>
+                    <a href="/page2A.html" class="nav-link">LGA Statistics</a>
+                    <a href="/page2B.html" class="nav-link">Regional Group Statistics</a>
+                    <a href="/page3A.html" class="nav-link">Compare LGA</a>
+                    <a href="/page3B.html" class="nav-link">Changes Over Time</a>
+                </div>
+            
+                <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                const navLinks = document.querySelectorAll('.topnav .nav-link');
+                const currentPage = window.location.pathname;
+
+                navLinks.forEach(link => {
+                    if (link.href.includes(currentPage)) {
+                        link.classList.add('active');
+                    }
+
+                    link.addEventListener('click', (event) => {
+                        navLinks.forEach(nav => nav.classList.remove('active'));
+                        event.target.classList.add('active');
+                    });
+                });
+            });
+            </script>
             """;
+
     
     public String header = """
                 <h1 class="header">
                     <div class="header-container">
-                        <a href='/'><img src="environment_icon_nobg.png" class="top-image" alt="Environment Icon"></a>
-                        <span>NEW SOUTH WALES WASTE MANAGEMENT AND RECYCLING</span>
+                        <div class="top-image-container">
+                            <a href='/'><img src="environment_icon_nobg.png" class="top-image" alt="Environment Icon"></a>
+                        </div>
+                        <div class="banner-container">
+                            <span>NEW SOUTH WALES WASTE MANAGEMENT AND RECYCLING</span>
+                        </div>
                     </div>
                 </h1>
             """;
