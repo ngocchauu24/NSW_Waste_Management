@@ -159,7 +159,26 @@ public class PageST3A implements Handler {
         
 
         // Finish the HTML webpage
-        html = html + "</body>" + "</html>";
+        html += """
+        <div class="footer-container">
+            <p>&copy; 2025 NSW Waste Management and Recycling Project</p>
+            <p>
+                Created by <strong>Ngoc Chau Vu (s4066600)</strong> and <strong>Jordan Wallace (s4087393)</strong> 
+                for the <em>Java Programming Studio (COSC 2803)</em> course at <strong>RMIT University</strong>.
+            </p>
+            <p>
+                Logo from 
+                <a href="https://www.flaticon.com/free-icons/environmental" 
+                   title="Environmental icons" 
+                   target="_blank">Environmental icons by Freepik - Flaticon</a>.
+            </p>
+            <p>
+                Persona images from 
+                <a href="https://thispersondoesnotexist.com/" target="_blank">Persona image</a>.
+            </p>
+        </div>
+        </body></html>
+        """;
         
 
         // DO NOT MODIFY THIS

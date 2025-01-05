@@ -278,6 +278,30 @@ table tbody tr td {
     font-size: 16px;
 }
 
+.footer-container {
+    background-color: #344E41;
+    color: #DAD7CD;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-top: 2px solid #DAD7CD;
+    flex-shrink: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container a {
+    color: #DAD7CD;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
 
   
 /*
