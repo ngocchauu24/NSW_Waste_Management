@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* app.App
+web: java -jar target/studio-project-1.0-SNAPSHOT.jar
