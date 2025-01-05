@@ -25,22 +25,25 @@ public class HTMLElements {
                 </div>
             
                 <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                const navLinks = document.querySelectorAll('.topnav .nav-link');
-                const currentPage = window.location.pathname;
+                    document.addEventListener('DOMContentLoaded', () => {
+                    const navLinks = document.querySelectorAll('.topnav .nav-link');
+                    const currentPage = window.location.pathname;
 
-                navLinks.forEach(link => {
-                    if (link.href.includes(currentPage)) {
-                        link.classList.add('active');
-                    }
+                    navLinks.forEach(link => {
+                        // Check for an exact match instead of "includes"
+                        if (link.getAttribute('href') === currentPage) {
+                            link.classList.add('active');
+                        }
 
-                    link.addEventListener('click', (event) => {
-                        navLinks.forEach(nav => nav.classList.remove('active'));
-                        event.target.classList.add('active');
+                        link.addEventListener('click', (event) => {
+                            // Remove 'active' from all links
+                            navLinks.forEach(nav => nav.classList.remove('active'));
+                            // Add 'active' to the clicked link
+                            event.target.classList.add('active');
+                        });
                     });
                 });
-            });
-            </script>
+                </script>
             """;
 
     
