@@ -362,7 +362,7 @@ public class HTMLElements {
     public String checkSelectionSearch(ArrayList<String> options, ArrayList<String> selections)
     {
         
-        String html = "<input type=\"text\" id=\"searchBar\" onkeyup=\"myFunction()\" placeholder=\"Search options..\">";
+        String html = "<input type=\"text\" id=\"searchBar\" onkeyup=\"myFunction()\" placeholder=\"-Search options-\">";
         
         html += "<div class='form-checkbox' id='myUL'>";
         for(String i: options)
