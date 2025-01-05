@@ -47,7 +47,7 @@ public class PageAbout implements Handler {
 
         html += """
         <div class='section-box'>
-            <h2>Our Customers</h2>
+            <h2>Our Typical Customers</h2>
             <div class='grid-three-columns'>
         """;
 
